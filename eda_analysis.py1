@@ -1,0 +1,27 @@
+import os
+import pandas as pd
+import matplotlib.pyplot as plt
+
+os.makedirs("plots", exist_ok=True)
+
+df = pd.read_csv("data/beauty_wellness.csv")
+
+if "price_usd" in df.columns:
+    prices = pd.to_numeric(df["price_usd"], errors="coerce").dropna()
+
+    plt.figure(figsize=(8, 5))
+    plt.hist(prices, bins=20)
+
+    plt.title("Beauty Products Price Distribution")
+    plt.xlabel("Price (USD)")
+    plt.ylabel("Number of Products")
+
+    plt.tight_layout()
+    plt.savefig("plots/price_histogram.png")
+    plt.close()
+
+    print("Price histogram generated successfully!")
+
+else:
+    print("Price column not found.")
+    print("Available columns:", df.columns.tolist())
