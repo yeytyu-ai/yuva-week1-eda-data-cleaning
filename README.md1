@@ -1,0 +1,37 @@
+# YuvaIntern Week 1 Task
+## Exploratory Data Analysis and Data Cleaning
+
+### Objective
+To analyze beauty and wellness product data using Python and identify missing values, duplicate records, and data quality issues.
+
+### Tools Used
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- GitHub
+
+### Project Activities
+1. Dataset inspection
+2. Data cleaning
+3. Missing value analysis
+4. Duplicate record detection
+5. Summary statistics
+6. Data visualization
+7. Findings and recommendations
+
+### Visualizations
+- Category Distribution
+- Price Histogram
+- Price Box Plot
+- Price vs Rating Scatter Plot
+
+### Project Structure
+- `eda_analysis.py` — Python analysis code
+- `data/` — Dataset
+- `output/` — Analysis results
+- `plots/` — Graphs
+- `report/` — Final report
+
+### Expected Outcome
+A cleaned dataset, summary statistics, visualizations, and a final report describing the analysis and findings.
