@@ -1,0 +1,18 @@
+# Price Box Plot
+
+if "price_usd" in df.columns:
+    prices = pd.to_numeric(df["price_usd"], errors="coerce").dropna()
+
+    plt.figure(figsize=(8, 5))
+    plt.boxplot(prices)
+
+    plt.title("Beauty Products Price Box Plot")
+    plt.ylabel("Price (USD)")
+
+    plt.tight_layout()
+    plt.savefig("plots/price_boxplot.png")
+    plt.close()
+
+    print("Price box plot generated successfully!")
+else:
+    print("Price column not found.")
